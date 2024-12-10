@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyNEWS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #0044cc, #0066ff);
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        nav {
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+        }
+        nav a:hover {
+            color: #ffcc00;
+            transform: scale(1.1);
+        }
+        
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .
+        .card {
+        width: 200px;
+        height: 200px;
+        background: #ccc;
+        opacity: 0.5;
+        transition: opacity 0.3s;
+    }
+    .card:hover {
+        opacity: 1;
+    }
+        .main-article {
+            background: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        .main-article:hover {
+            transform: scale(1.03);
+            opacity: 1;
+        }
+        .main-article img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .main-article h2 {
+            color: #333;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            background: #ccc;
+        }
+        .article {
+            background: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            opacity: 0.5; /* Set initial opacity */
+            transition: opacity 0.3s ease-in-out; /* Add transition for opacity */
+        }
+        .article:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            opacity: 1;
+        }
+        .article img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .article p a {
+            color: #0044cc;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .article p a:hover {
+            color: #ff6600;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: linear-gradient(135deg, #0044cc, #0066ff);
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            height: 50%;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+        }
+
+        .social-icons img {
+            width: 30px;
+            height: auto;
+            border-radius: 60%;
+            transition: transform 0.3s;
+            margin: center;
+        }
+        .social-icons img:hover {
+            transform: scale(1.2);
+        }
+        .rounded-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            object-fit: cover;
+        }
+        .progress-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 500px;
+}
+
+.progress-bar {
+    width: 0;
+    height: 15px;
+    background-color: var(--bar-color, #333);
+    border-radius: 5px;
+    animation: load-bar 2s linear var(--bar-delay, 0s) infinite;
+}
+
+@keyframes load-bar {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+        footer p {
+            font-size: 0.9em;
+            margin-top: 15px;
+        }
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1><img src="https://logos-world.net/wp-content/uploads/2023/04/Sky-News-Logo-1997.png" alt="Жаңалықтар Сайты " width="100">Жаңалықтар</h1>
+    <br>
+    <nav>
+        <ul class="menu">
+        <li><a href="file:///C:/Users/User/Desktop/sky-news.html">Басты бет</a></li>
+        <li>
+            <a href="#">Жаңалықтар</a>
+            <ul class="submenu">
+                <li><a href="file:///C:/Users/User/Desktop/sky-newws-smart.html">Спорт</a></li>
+                <li><a href="file:///C:/Users/User/Desktop/саясат.html">Саясат</a></li>
+                <li><a href="file:///C:/Users/User/Desktop/Әлемде.html">Әлемде</a></li>
+            </ul>
+        </li>
+        <li><a href="file:///C:/Users/user/Desktop/%D0%B1%D0%B0%D0%B9%D0%BB%D0%B0%D0%BD%D1%8B%D1%81.html">Байланыс</a></li>
+    </ul>
+</nav>
+<style>
+    .menu {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .menu > li {
+        position: relative;
+        margin: 0 20px;
+    }
+    .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: blue;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        list-style: none;
+    }
+    .menu > li:hover .submenu {
+        display: block;
+    }
+    .submenu > li {
+        margin: 5px 0;
+    }
+
+    /* Контейнер стилі */
+.share-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Бөлісу батырмасы */
+.share-btn {
+    background-color: #0044cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.share-btn:hover {
+    background-color: #ff6600;
+    transform: scale(1.1);
+}
+
+/* Бөлісу меню */
+
+.share-menu {
+    width: 200px;
+    height: 200px;
+    display: none;
+    position: absolute;
+    top: 50px;
+    margin-left: 1300px;
+    margin-top: 400px;
+    left: 0;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.share-menu a {
+    display: block;
+    margin: 5px 0;
+    color: #0044cc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.share-menu a:hover {
+    color: #ff6600;
+}
+.share-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #000000;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(255, 130, 240);
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 10px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .share-menu {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background: rgb(255, 255, 255);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            display: none;
+            z-index: 10;
+        }
+
+        .share-menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .share-menu ul li {
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .share-menu ul li:last-child {
+            border-bottom: none;
+        }
+
+        .share-menu ul li:hover {
+            background-color: #f0f0f0;
+        }
+
+        .share-menu ul li .icon {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 16px;
+            color: white;
+        }
+
+        .icon.instagram {
+            background-color: #e4405f;
+        }
+
+        .icon.telegram {
+            background-color: #0088cc;
+        }
+
+        .icon.facebook {
+            background-color: #4267B2;
+        }
+</style>
+</header>
+       
+
+<style>
+    .side-menu {
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 300px;
+        height: 100%;
+        background: blue;
+        padding: 20px;
+        box-shadow: -4px 0 8px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s;
+    }
+    .side-menu.active {
+        transform: translateX(-300px);
+    }
+</style>
+
+<script>
+    const menuButton = document.getElementById("toggle-menu");
+    const sideMenu = document.querySelector(".side-menu");
+    menuButton.addEventListener("click", () => {
+        sideMenu.classList.toggle("active");
+    });
+</script>
+
+<div class="container">
+    <h2></h2>
+
+     <div class="grid-container">
+        <div class="article">
+            <img src="https://cdn.nur.kz/images/720x405/4207d08e81cce983.webp?version=1" alt="Жаңалық 1 суреті">
+            <p><a href="https://kaz.nur.kz/sport/hockey/2198112-olimpiadaga-irikteu-turnirine-qatysatyn-qazaqstandyq-hokkeishiler-belgili-boldy/">Олимпиадаға іріктеу турниріне қатысатын қазақстандық хоккейшілер белгілі болды </a></p>
+        </div>
+
+        <div class="article">
+            <img src="https://cdn.nur.kz/images/720x405/cd7a5b5f6ee8ebc3.webp?version=1" alt="Мақала 1 суреті">
+            <p><a href="https://kaz.nur.kz/sport/mma/2198085-shavkat-rahmonovtyng-zhekpe-zhegi-nege-memlekettik-telearnalardan-korsetilmedi/">Шавкат Рахмоновтың жекпе-жегі неге мемлекеттік телеарналардан көрсетілмеді</a></p>
+        </div>
+
+        <div class="article">
+            <img src="https://cdn.nur.kz/images/720x405/2393f24683079208.webp?version=1" alt="Жаңалық 2 суреті">
+            <p><a href="https://kaz.nur.kz/politics/2173689-prezident-ustel-tennisinen-aziia-chempionatynyng-finaldyq-oiyndaryn-tamashalady/">Президент үстел теннисінен Азия чемпионатының финалдық ойындарын тамашалады.</a></p>
+        </div>
+
+        <div class="article">
+            <img src="https://s-cdn.sportbox.ru/images/styles/1200-auto/fp_fotos/18/a2/843c0da3ef4c74003f5c07a4203046b66200c1c28c809933170938.jpg" alt="Мақала 2 суреті">
+            <p><a href="https://kaz.nur.kz/sport/mma/2181581-shavkat-rahmonov-ufc-chempiony-belal-muhammadqa-undeu-zhasady/">Шавкат Рахмоновтың UFC чемпионы титулы үшін жекпе-жегі Лас-Вегаста өтеді.</a></p>
+        </div>
+
+        <div class="article">
+            <img src="https://cdn.nur.kz/images/720x405/79bf93e72cf0db16.webp?version=1" alt="Мақала 2 суреті">
+            <p><a href="https://kaz.nur.kz/sport/football/2197251-futboldy-sagyndym-baqtier-zainutdinov-beshiktash-sapyndagy-qazirgi-zhagdaiy-turaly-aitty/">Футболды сағындым": Бақтиер Зайнутдинов "Бешікташ" сапындағы қазіргі жағдайы туралы айтты</a></p>
+        </div>
+
+        <div class="article">
+            <img src="https://cdn.nur.kz/images/720x405/5aefbb82ec32bd6c.webp?version=1" alt="Мақала 2 суреті">
+            <p><a href="https://kaz.nur.kz/sport/boxing/2197659-aibek-oralbai-ozbek-boksshysyn-zhengip-aziia-chempionatynyng-finalyna-shyqty/">Айбек Оралбай өзбек боксшысын жеңіп, Азия чемпионатының финалына шықты</a></p>
+        </div>
+        <div class="article">
+            <img src="https://cdn.nur.kz/images/720x405/90161171f0a097fe.webp?version=1" alt="Мақала 1 суреті">
+            <p><a href="https://kaz.nur.kz/sport/boxing/2197656-sagyndyq-togambai-aziia-chempionatynyng-finalyna-zholdama-aldy/">Сағындық Тоғамбай Азия чемпионатының финалына жолдама алды</a></p>
+        </div>
+        <div class="article">
+            <img src="https://cdn.nur.kz/images/720x405/ec290848ce913574.webp?version=1" alt="Мақала 1 суреті">
+            <p><a href="https://kaz.nur.kz/sport/football/2194877-nuraly-alip-resei-chempionatyndagy-algashqy-golyn-salgan-song-zharaqat-alyp-qaldy-video/">Нұралы Әліп Ресей чемпионатындағы алғашқы голын салған соң жарақат алып қалды </a></p>
+        </div>
+
+    </div>
+</div>
+<div class="progress-bars">
+    <div class="progress-bar" style="--bar-color: #ff0000; --bar-delay: 0s;"></div>
+    <div class="progress-bar" style="--bar-color: #00ff00; --bar-delay: 0.2s;"></div>
+    <div class="progress-bar" style="--bar-color: #0000ff; --bar-delay: 0.4s;"></div>
+    <div class="progress-bar" style="--bar-color: #ff9900; --bar-delay: 0.6s;"></div>
+</div>
+
+<div class="share-button">&#x1f517;</div>
+        <div class="share-menu">
+            <ul>
+                <li onclick="window.open('https://instagram.com', '_blank')">
+                    <span class="icon instagram">I</span> Instagram
+                </li>
+                <li onclick="window.open('https://telegram.org', '_blank')">
+                    <span class="icon telegram">T</span> Telegram
+                </li>
+                <li onclick="window.open('https://facebook.com', '_blank')">
+                    <span class="icon facebook">F</span> Facebook
+                </li>
+            </ul>
+        </div>
+
+        <script>
+            // Share Button Toggle
+            const shareButton = document.querySelector('.share-button');
+            const shareMenu = document.querySelector('.share-menu');
+    
+            shareButton.addEventListener('click', () => {
+                shareMenu.style.display = 
+                    shareMenu.style.display === 'block' ? 'none' : 'block';
+            });
+        </script>
+
+<footer>
+
+</footer>   
